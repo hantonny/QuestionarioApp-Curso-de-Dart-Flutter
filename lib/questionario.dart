@@ -8,7 +8,8 @@ class Questionario extends StatelessWidget {
   final int perguntaSelecionada;
   final void Function(int) quandoResponder;
 
-  Questionario({
+  const Questionario({
+    super.key,
     required this.perguntas,
     required this.perguntaSelecionada,
     required this.quandoResponder,

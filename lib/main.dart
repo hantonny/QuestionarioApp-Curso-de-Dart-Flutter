@@ -1,9 +1,11 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 import './resultado.dart';
 import './questionario.dart';
 
-main() => runApp(new PerguntaApp());
+main() => runApp(const PerguntaApp());
 
 class _PerguntaAppState extends State<PerguntaApp> {
   var _perguntaSelecionada = 0;
@@ -81,6 +83,9 @@ class _PerguntaAppState extends State<PerguntaApp> {
 }
 
 class PerguntaApp extends StatefulWidget {
+  const PerguntaApp({super.key});
+
+  @override
   _PerguntaAppState createState() {
     return _PerguntaAppState();
   }

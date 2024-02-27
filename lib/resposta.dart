@@ -4,20 +4,20 @@ class Resposta extends StatelessWidget {
   final String texto;
   final void Function() onSelecao;
 
-  Resposta(this.texto, this.onSelecao);
+  const Resposta(this.texto, this.onSelecao, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: EdgeInsets.all(20),
+      margin: const EdgeInsets.all(20),
       child: ElevatedButton(
         onPressed: onSelecao,
-        child: Text(texto),
         style: ElevatedButton.styleFrom(
+          foregroundColor: Colors.white,
           backgroundColor: Colors.blue,
-          onPrimary: Colors.white,
         ),
+        child: Text(texto),
       ),
     );
   }
